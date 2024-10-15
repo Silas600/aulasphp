@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Variáveis e Constantes</h1>
@@ -33,7 +34,7 @@
     ?>
 
     <h2>Saída de dados simplificada/direta</h2>
-    <p>Estamos no <?= $curso ?> em <?= $ano ?>.</p>
+    <p> <?= $curso ?> em <?= $ano ?>.</p>
     
     <p><?= AUTOR ?> trabalha na empresa <?= EMPRESA ?>.</p>
 
