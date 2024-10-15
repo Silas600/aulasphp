@@ -10,27 +10,36 @@
     <hr>
     <h2>Declaração e saída usando echo</h2>
     <?php
-    //Variáveis
-    $curso = "Progamador Web";
+    // Variáveis
+    $curso = "Programador Web";  
     $ano = 2024;
     $area = "Back-End";
 
     // Estamos no Programador Web em 2024
 
-    // saída interpolada (Usando aspas duplas)
-    echo "<p> Estamos no $curso em $ano.";
+    // Saída interpolada (Usando aspas duplas)
+    echo "<p> Estamos no $curso em $ano.</p>"; // Fechamento correto da tag <p>
 
-    //com aspas simples, PHP NÃO interpreta variável
-    echo '<p> Estamos no $curso em $ano.';
+    // Com aspas simples, PHP NÃO interpreta variável
+    echo '<p> Estamos no curso em '.$ano.'.</p>'; // Usada concatenação para saída correta
 
-    // constantes 
-define("AUTOR","Fulano"); // tradicional, antiga
-const EMPRESA = "ABC TECNOLOGIA"; // nova, morderna
+    // Constantes 
+    define("AUTOR", "Fulano"); // Definição tradicional, antiga
+    const EMPRESA = "ABC TECNOLOGIA"; // Definição nova, moderna
 
-   //Fulano trabaljha na empresa abc Tecnologia
-   // (usando concatenação [ ponto final])
-    echo "<p>".AUTOR." Trabalha na empresa ".EMPRESA."<p>";
-?>
+    // Fulano trabalha na empresa ABC Tecnologia
+    // (usando concatenação [ponto final])
+    echo "<p>".AUTOR." trabalha na empresa ".EMPRESA.".</p>"; // Fechamento correto da tag <p>
+    ?>
+
+    <h2>Saída de dados simplificada/direta</h2>
+    <p>Estamos no <?= $curso ?> em <?= $ano ?>.</p>
+    
+    <p><?= AUTOR ?> trabalha na empresa <?= EMPRESA ?>.</p>
+
+
+
+
 
 </body>
 </html>
