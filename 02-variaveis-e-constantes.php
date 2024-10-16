@@ -22,7 +22,7 @@
     echo "<p> Estamos no $curso em $ano.</p>"; // Fechamento correto da tag <p>
 
     // Com aspas simples, PHP NÃO interpreta variável
-    echo '<p> Estamos no curso em '.$ano.'.</p>'; // Usada concatenação para saída correta
+    echo '<p> Estamos no '.$curso.' em '.$ano.'.</p>'; // Usada concatenação para saída correta
 
     // Constantes 
     define("AUTOR", "Fulano"); // Definição tradicional, antiga
@@ -34,9 +34,13 @@
     ?>
 
     <h2>Saída de dados simplificada/direta</h2>
-    <p> <?= $curso ?> em <?= $ano ?>.</p>
+     <p> Estamos no <?= $curso ?> em <?= $ano ?>.</p>
     
     <p><?= AUTOR ?> trabalha na empresa <?= EMPRESA ?>.</p>
+
+
+
+
 
 </body>
 </html>
