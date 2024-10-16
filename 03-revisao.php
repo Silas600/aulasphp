@@ -23,7 +23,7 @@ $idade = 25;
 
 <p>Olá! meu nome é <i style="color: red;"><?=NOME?></i> e tenho <span style="background-color: orange;"><?= $idade?></span> anos.</p>
 
-<p> olá! meu nome é <i><?=NOME?></i> e tenho <span><?=$idade?></span></p>
+<p> olá! meu nome é <i style="color: blue;"><?=NOME?></i> e tenho <span style="background-color: yellow;"><?=$idade?></span></p>
 
 
 
