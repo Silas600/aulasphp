@@ -38,9 +38,5 @@
     
     <p><?= AUTOR ?> trabalha na empresa <?= EMPRESA ?>.</p>
 
-
-
-
-
 </body>
 </html>
