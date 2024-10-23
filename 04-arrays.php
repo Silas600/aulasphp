@@ -10,7 +10,6 @@
 <body>
     <h1>Arrays no PHP</h1>
     <hr>
-
     <?php
     // array numérico/indexado
     $bandas = ["Slayer", "Nightwish", "Pink Floyd", "Savatage"];
@@ -42,10 +41,11 @@ $filme = [
 <h2>comandos úteis para análise de Arrays</h2>
 
 <h3>print_r (nomeArray)</h3>
-<pre><?=print_r($bandas)?></pre>
+<pre><?=print_r($filme)?></pre>
 
 <h3>var_dump(nomeArray)</h3>
-<pre><?=var_dump($bandas)?></pre>
+<pre><?=var_dump($filme)?></pre>
+
 
 
 
