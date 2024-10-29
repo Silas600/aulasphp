@@ -1,3 +1,4 @@
+<?php include "recursos-externos.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,29 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisão HTML e PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nome {
+            color: red;
+            font-style: italic;
+        }
+        .idade-bg {
+            background-color: orange;
+        }
+        .idade-bg-alt {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <h1>Revisando o básico</h1>
-    <hr>
+    <div class="container">
+        <header>
+            <h1>Revisando o básico</h1>
+        </header>
+        <hr>
+        <ul>
+            <?php foreach($tecnologias as $tec): ?>
+                <li><?= htmlspecialchars($tec) ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <hr>
 
-<?php 
-/* criar duas variáveis e /ou contantes */
-const NOME = "Chapolin Colorado";
-$idade = 25; 
+        <?php 
+        const NOME = "Chapolin Colorado";
+        $idade = 25; 
+        ?>
 
-/* Exibir no HTML uma frase da seguinte forma */
-// olá meu nome é Chapolin Colorado e tenho 25 anos.
-// O nome deve aparecer em itálico e com cor diferente no texto 
-// A idade deve aparecer apenas com cor de fundo diferente.
-?>
-
-<p>Olá! meu nome é <i style="color: red;"><?=NOME?></i> e tenho <span style="background-color: orange;"><?= $idade?></span> anos.</p>
-
-<p> olá! meu nome é <i style="color: blue;"><?=NOME?></i> e tenho <span style="background-color: yellow;"><?=$idade?></span></p>
-
-
-
-
-
+        <p>Olá! meu nome é <span class="nome"><?= htmlspecialchars(NOME) ?></span> e tenho <span class="idade-bg"><?= $idade ?></span> anos.</p>
+        <p>Olá! meu nome é <span class="nome" style="color: blue;"><?= htmlspecialchars(NOME) ?></span> e tenho <span class="idade-bg-alt"><?= $idade ?></span> anos.</p>
+    </div>
 </body>
 </html>
